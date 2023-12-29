@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+coverage/
+tests/
+*.log
+.env
+*.spec.ts
+*.test.ts
+*.d.ts
+*.json
+*.md
+*.yml
+*.lock

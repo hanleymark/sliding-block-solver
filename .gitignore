@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+
+# Generated files
+dist/
+build/
+coverage/
+
+# Temporary files
+*.env.example
+.env
+
+# Logs
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Testing
+jest/__mocks__/
+__tests__/
+
+# Editor config
+.eslintrc
+.prettierrc
+
+# Prettier cache
+.prettier-cache
+
+# TypeScript compiler cache
+**/.tsbuildinfo
+
+# Miscellaneous
+*.bak
+*.tmp
+*~
+
+# Visual Studio Code temporary files
+**/.vscode/*

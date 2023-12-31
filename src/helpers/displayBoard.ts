@@ -16,11 +16,16 @@ const displayBoard = (board: Board): string => {
     x: '\u253c',
   };
 
+  // gridTop:
+  // ┌───┬───┬───┐
   let gridTop = Edge.tl + Edge.h.repeat(3);
   gridTop += (Edge.tm + Edge.h.repeat(3)).repeat(size - 1);
   gridTop += Edge.tr;
   gridTop += '\n';
 
+  // gridMiddle:
+  // │ # │ # │ # │
+  // ├───┼───┼───┤
   let gridMiddle = (Edge.v + ' # ').repeat(size) + Edge.v + '\n';
   gridMiddle +=
     Edge.lm +
@@ -29,13 +34,18 @@ const displayBoard = (board: Board): string => {
     Edge.rm +
     '\n';
 
+  // gridBottom:
+  // │ # │ # │ # │
+  // └───┴───┴───┘
   let gridBottom = (Edge.v + ' # ').repeat(size) + Edge.v + '\n';
   gridBottom += Edge.bl + Edge.h.repeat(3);
   gridBottom += (Edge.bm + Edge.h.repeat(3)).repeat(size - 1);
   gridBottom += Edge.br + '\n';
 
+  // Assemble grid
   let grid = gridTop + gridMiddle.repeat(size - 1) + gridBottom;
-  
+
+  // Replace # with tile values
   const tiles = board.boardAsString();
   let index = 0;
   return grid.replace(/#/g, () => {

@@ -1,7 +1,7 @@
 import Board from './Board';
 import displayBoard from './helpers/displayBoard';
 
-const board = new Board('173526048');
+const board = new Board('173520648');
 
 console.log(`Board as string: ${board.boardAsString()}`);
 console.log(`Tile at row 0, column 0: ${board.tileAt(0, 0)}`);

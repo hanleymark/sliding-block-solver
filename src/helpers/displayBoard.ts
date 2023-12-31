@@ -35,6 +35,7 @@ const displayBoard = (board: Board): string => {
   gridBottom += Edge.br + '\n';
 
   let grid = gridTop + gridMiddle.repeat(size - 1) + gridBottom;
+  
   const tiles = board.boardAsString();
   let index = 0;
   return grid.replace(/#/g, () => {

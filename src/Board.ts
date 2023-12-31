@@ -31,8 +31,4 @@ export default class Board {
   
       return this.board[row][col];
     }
-    public displayString(): string {
-      return this.board.map((row) => row.join('')).join('\n');
-    }
   }
-  
